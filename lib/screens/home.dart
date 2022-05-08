@@ -14,16 +14,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+      body: Column(
+        children: <Widget>[
+          Padding(
+              padding: EdgeInsets.only(left: 20, top: 20, bottom: 20),
+              child: Text('MemoMemo',
+                  style: TextStyle(fontSize: 36, color: Colors.blue))),
+          Expanded(child: memoBulider())
+        ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('You have pushed the button this many times: '),
-          ],
-        ),
       ),
       floatingActionButton: FloatingActionButton.extended(
           //.extended = 확장된 기능을 불러옴
